@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5E595CF-AFE2-427A-AEE7-C705BD1BCC87}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>arm_net</RootNamespace>
+    <AssemblyName>arm_net</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agree_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agree_add.Designer.cs">
+      <DependentUpon>agree_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agree_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agree_edit.Designer.cs">
+      <DependentUpon>agree_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comp_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="comp_add.Designer.cs">
+      <DependentUpon>comp_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comp_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="comp_edit.Designer.cs">
+      <DependentUpon>comp_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auth.Designer.cs">
+      <DependentUpon>auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ed_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ed_add.Designer.cs">
+      <DependentUpon>ed_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ed_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ed_edit.Designer.cs">
+      <DependentUpon>ed_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="password.Designer.cs">
+      <DependentUpon>password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="staff_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_add.Designer.cs">
+      <DependentUpon>staff_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staff_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_edit.Designer.cs">
+      <DependentUpon>staff_edit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="agree_add.resx">
+      <DependentUpon>agree_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agree_edit.resx">
+      <DependentUpon>agree_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auth.resx">
+      <DependentUpon>auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="comp_add.resx">
+      <DependentUpon>comp_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="comp_edit.resx">
+      <DependentUpon>comp_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ed_add.resx">
+      <DependentUpon>ed_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ed_edit.resx">
+      <DependentUpon>ed_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="password.resx">
+      <DependentUpon>password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="staff_add.resx">
+      <DependentUpon>staff_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_edit.resx">
+      <DependentUpon>staff_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\скрыть.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\показать.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\очистка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\поиск.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
